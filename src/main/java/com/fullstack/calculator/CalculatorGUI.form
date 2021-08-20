@@ -108,7 +108,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="powerBtn" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton1" max="32767" attributes="0"/>
+                          <Component id="backSpaceBtn" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -130,7 +130,7 @@
                       <Component id="plusMinusBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="sqrtBtn" alignment="3" max="32767" attributes="0"/>
                       <Component id="powerBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="backSpaceBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -292,6 +292,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="."/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dotBtnActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <AuxValues>
@@ -341,10 +344,13 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="powerBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="backSpaceBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="&lt;--"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backSpaceBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="resultTextField">
         </Component>

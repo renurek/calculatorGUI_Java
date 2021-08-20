@@ -54,7 +54,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         plusMinusBtn = new javax.swing.JButton();
         sqrtBtn = new javax.swing.JButton();
         powerBtn = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        backSpaceBtn = new javax.swing.JButton();
         resultTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -165,6 +165,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         dotBtn.setText(".");
+        dotBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dotBtnActionPerformed(evt);
+            }
+        });
 
         displayTextField.setEditable(false);
         displayTextField.setColumns(20);
@@ -199,7 +204,12 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("<--");
+        backSpaceBtn.setText("<--");
+        backSpaceBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backSpaceBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -256,7 +266,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(powerBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(backSpaceBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -273,7 +283,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                     .addComponent(plusMinusBtn)
                     .addComponent(sqrtBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(powerBtn)
-                    .addComponent(jButton1))
+                    .addComponent(backSpaceBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(minusBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
@@ -329,6 +339,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void calcOn() {
         if (switchBtn.getModel().isSelected()) {
             displayTextField.setText("");
+            resultTextField.setText("");
             oneBtn.setEnabled(true);
             twoBtn.setEnabled(true);
             threeBtn.setEnabled(true);
@@ -348,8 +359,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
             divideBtn.setEnabled(true);
             dotBtn.setEnabled(true);
             equalBtn.setEnabled(true);
+            backSpaceBtn.setEnabled(true);
         } else {
             displayTextField.setText("");
+            resultTextField.setText("");
             oneBtn.setEnabled(false);
             twoBtn.setEnabled(false);
             threeBtn.setEnabled(false);
@@ -369,6 +382,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
             divideBtn.setEnabled(false);
             dotBtn.setEnabled(false);
             equalBtn.setEnabled(false);
+            backSpaceBtn.setEnabled(false);
         }
     }
 
@@ -378,7 +392,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_switchBtnActionPerformed
 
     private void oneBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneBtnActionPerformed
-        if (equalPressed) {
+        if (!equalPressed) {
             displayTextField.setText(displayTextField.getText() + "1");
         } else {
             displayTextField.setText("1");
@@ -388,7 +402,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_oneBtnActionPerformed
 
     private void twoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoBtnActionPerformed
-        if (equalPressed) {
+        if (!equalPressed) {
             displayTextField.setText(displayTextField.getText() + "2");
         } else {
             displayTextField.setText("2");
@@ -398,7 +412,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_twoBtnActionPerformed
 
     private void threeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeBtnActionPerformed
-        if (equalPressed) {
+        if (!equalPressed) {
             displayTextField.setText(displayTextField.getText() + "3");
         } else {
             displayTextField.setText("3");
@@ -408,7 +422,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_threeBtnActionPerformed
 
     private void fourBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + "4");
         else {
             displayTextField.setText("4");
@@ -418,7 +432,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_fourBtnActionPerformed
 
     private void sixBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + "6");
         else {
             displayTextField.setText("6");
@@ -428,7 +442,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_sixBtnActionPerformed
 
     private void sevenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + "7");
         else {
             displayTextField.setText("7");
@@ -438,7 +452,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_sevenBtnActionPerformed
 
     private void eightBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + "8");
         else {
             displayTextField.setText("8");
@@ -448,7 +462,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_eightBtnActionPerformed
 
     private void nineBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + "9");
         else {
             displayTextField.setText("9");
@@ -463,7 +477,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_plusMinusBtnActionPerformed
 
     private void powerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + " ^ ");
         else {
             displayTextField.setText(" ^ ");
@@ -472,11 +486,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_powerBtnActionPerformed
 
-    private void sqrtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sqrtBtnActionPerformed
-    }//GEN-LAST:event_sqrtBtnActionPerformed
-
     private void plusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + " + ");
         else {
             displayTextField.setText(" + ");
@@ -486,7 +497,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_plusBtnActionPerformed
 
     private void minusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusBtnActionPerformed
-        if (equalPressed) {
+        if (!equalPressed) {
             displayTextField.setText(displayTextField.getText() + " - ");
         } else {
             displayTextField.setText(" - ");
@@ -497,7 +508,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_minusBtnActionPerformed
 
     private void multiplyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + " * ");
         else {
             displayTextField.setText(" * ");
@@ -506,7 +517,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_multiplyBtnActionPerformed
 
     private void divideBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + " / ");
         else {
             displayTextField.setText(" / ");
@@ -517,18 +528,47 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void equalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalBtnActionPerformed
         String exp = displayTextField.getText();
         double result = c.splitExpression(exp);
-        displayTextField.setText(displayTextField.getText() + "\n\n\n\n\t\t" + result + "");
+        resultTextField.setText(result + "");
         equalPressed = true;
     }//GEN-LAST:event_equalBtnActionPerformed
 
     private void zeroBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroBtnActionPerformed
-        if (equalPressed)
+        if (!equalPressed)
             displayTextField.setText(displayTextField.getText() + "0");
         else {
             displayTextField.setText("0");
             equalPressed = false;
         }
     }//GEN-LAST:event_zeroBtnActionPerformed
+
+    private void dotBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotBtnActionPerformed
+        // TODO add your handling code here:
+        if (!equalPressed)
+            displayTextField.setText(displayTextField.getText() + ".");
+        else {
+            displayTextField.setText(".");
+            equalPressed = false;
+        }
+    }//GEN-LAST:event_dotBtnActionPerformed
+
+    private void sqrtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sqrtBtnActionPerformed
+        // TODO add your handling code here:
+        if (!equalPressed)
+            displayTextField.setText("sqrt " + displayTextField.getText());
+        else {
+            displayTextField.setText("sqrt ");
+            equalPressed = false;
+        }
+    }//GEN-LAST:event_sqrtBtnActionPerformed
+
+    private void backSpaceBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backSpaceBtnActionPerformed
+        // TODO add your handling code here:
+        String s = displayTextField.getText();
+        if (!s.equals("")) {
+            s = s.substring(0, s.length() - 1);
+            displayTextField.setText(s);
+        }
+    }//GEN-LAST:event_backSpaceBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -566,6 +606,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backSpaceBtn;
     private javax.swing.JTextArea displayTextField;
     private javax.swing.JButton divideBtn;
     private javax.swing.JButton dotBtn;
@@ -573,7 +614,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton equalBtn;
     private javax.swing.JButton fiveBtn;
     private javax.swing.JButton fourBtn;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton minusBtn;
