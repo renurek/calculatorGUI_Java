@@ -1,5 +1,8 @@
 package com.fullstack.calculator;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Renu_15
@@ -526,10 +529,14 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_divideBtnActionPerformed
 
     private void equalBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalBtnActionPerformed
-        String exp = displayTextField.getText();
-        double result = c.splitExpression(exp);
-        resultTextField.setText(result + "");
         equalPressed = true;
+        try {
+            String exp = displayTextField.getText();
+            String result = c.splitExpression(exp);
+            resultTextField.setText(result + "");
+        } catch (Exception ex) {
+            resultTextField.setText("Error");
+        }
     }//GEN-LAST:event_equalBtnActionPerformed
 
     private void zeroBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroBtnActionPerformed
@@ -563,6 +570,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     private void backSpaceBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backSpaceBtnActionPerformed
         // TODO add your handling code here:
+        equalPressed = false;
         String s = displayTextField.getText();
         if (!s.equals("")) {
             s = s.substring(0, s.length() - 1);
