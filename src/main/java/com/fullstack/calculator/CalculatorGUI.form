@@ -46,52 +46,50 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="plusMinusBtn" min="-2" pref="49" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="sqrtBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="powerBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="switchBtn" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="oneBtn" min="-2" pref="47" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="divideBtn" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="sevenBtn" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="fourBtn" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
-                                  </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="plusMinusBtn" min="-2" pref="49" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="sqrtBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="powerBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="switchBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="oneBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="divideBtn" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="sevenBtn" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="fourBtn" alignment="1" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="multiplyBtn" min="-2" pref="47" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="minusBtn" min="-2" pref="47" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="plusBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="multiplyBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="minusBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="plusBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="eightBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="twoBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <Component id="fiveBtn" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="eightBtn" min="-2" pref="47" max="-2" attributes="0"/>
-                                          <Component id="twoBtn" min="-2" pref="47" max="-2" attributes="0"/>
-                                          <Component id="fiveBtn" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="sixBtn" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="nineBtn" max="32767" attributes="0"/>
-                                          <Component id="threeBtn" min="-2" pref="47" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="equalBtn" max="32767" attributes="0"/>
-                                          <Component id="zeroBtn" max="32767" attributes="0"/>
-                                          <Component id="dotBtn" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
-                                      </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="sixBtn" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="nineBtn" max="32767" attributes="0"/>
+                                      <Component id="threeBtn" min="-2" pref="47" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="equalBtn" max="32767" attributes="0"/>
+                                      <Component id="zeroBtn" max="32767" attributes="0"/>
+                                      <Component id="dotBtn" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -114,11 +112,13 @@
                       <Component id="powerBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="minusBtn" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="plusBtn" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="multiplyBtn" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="divideBtn" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="minusBtn" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="plusBtn" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="divideBtn" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
